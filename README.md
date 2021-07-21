@@ -5,8 +5,13 @@
 <a name="aboutme"></a>
 ## SortList
 
-1) find mid point
+1) identify dummy head/current pointer
+2) check if lists exist/have content within. if either are empty, return the other.
+4) sort into merged list by comparing left and right. 
+5) return dummy.next to give entire list
 
+<p> Time Complexity: O(nlogn) </p>
+<p> Space Complexity O(n)</p>
 
 <a name="mergsort"></a>
 ## Merge 2 Sorted Lists
