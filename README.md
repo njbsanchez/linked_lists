@@ -21,6 +21,17 @@ Compilation of all linked list whiteboarding problems with psuedocode notes and 
 4) sort into merged list by comparing left and right. 
 5) return dummy.next to give entire list
 
+<a name="llist_cycle"></a>
+## Determine if Cycle Present
+
+<p> Time Complexity: O(nlogn) </p>
+<p> Space Complexity O(n)</p>
+
+1) identify dummy head/current pointer
+2) check if lists exist/have content within. if either are empty, return the other.
+4) sort into merged list by comparing left and right. 
+5) return dummy.next to give entire list
+
 <a name="mergesort"></a>
 ## Merge 2 Sorted Lists
 
@@ -36,7 +47,7 @@ Compilation of all linked list whiteboarding problems with psuedocode notes and 
 <a name="removenth"></a>
 ## Remove Nth Node from End
 
-<p> Time Complexity: O(n) </p>
+<p> Time Complexity: O(n) in worst case scenario. (if no cycle, O(N/2)). </p>
 <p> Space Complexity O(n)</p>
 <p> Resource/Tutorial: https://www.youtube.com/watch?v=IwKSscJW0Uk </p>
 
@@ -52,3 +63,4 @@ Summary: use of two pointers (with n-step delay) to determine traits about direc
 <a name="misc"></a>
 ## Misc Notes
 - cannot use quicksort on linked lists bc linked lists are not indexable
+- If you only use pointers without any other extra space, the space complexity will be O(1).
