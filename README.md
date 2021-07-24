@@ -60,6 +60,15 @@ Compilation of all linked list whiteboarding problems with psuedocode notes and 
 
 Summary: use of two pointers (with n-step delay) to determine traits about directional data structures. In this case, used to determine if there are cycles in a data structure (in O(n) time).
 
+<a name="reverse"></a>
+## Reverse Linked List (iteratively)
+
+<p>TBA </p>
+
+## Reverse Linked List (recursively)
+
+<p>TBA </p>
+
 <a name="misc"></a>
 ## Misc Notes
 - cannot use quicksort on linked lists bc linked lists are not indexable
