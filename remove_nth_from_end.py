@@ -50,9 +50,6 @@ class Solution(object):
             
         return dummy_head.next
     
-        """uses Floyd's Cycle Detection algorythm - use of two pointers to determin traits about directional data structures. 
-        Use cases:
-            - find median in a list using O(n) time complexity
-            - (in this case)to determine if there are cuycles in a data structure. 
+        """use of two pointers (with n-step delay) to determine traits about directional data structures. In this case, used to determine if there are cycles in a data structure (in O(n) time).
             
         """
