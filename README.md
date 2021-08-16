@@ -13,13 +13,15 @@ Compilation of all linked list whiteboarding problems with psuedocode notes and 
 <a name="sortlist"></a>
 ## SortList
 
-<p> Time Complexity: O(nlogn) </p>
+<p><a href="https://github.com/njbsanchez/linked_lists/commit/c382b0815124714063fdc33724da3d064099511f">Code</a></p>
+<p>Time Complexity: O(nlogn) </p>
 <p> Space Complexity O(n)</p>
 
 1) identify dummy head/current pointer
-2) check if lists exist/have content within. if either are empty, return the other.
-4) sort into merged list by comparing left and right. 
-5) return dummy.next to give entire list
+2) BASE: check if lists exist/have content within. if either are empty, return the other.
+4) split: use slow/fast
+5) sort into merged list by comparing left and right. 
+6) return dummy.next to give entire list
 
 <a name="llist_cycle"></a>
 ## Determine if Cycle Present
