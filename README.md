@@ -13,19 +13,22 @@ Compilation of all linked list whiteboarding problems with psuedocode notes and 
 <a name="sortlist"></a>
 ## SortList
 
-<p><a href="https://github.com/njbsanchez/linked_lists/commit/c382b0815124714063fdc33724da3d064099511f">Code</a></p>
+<p><a href="https://github.com/njbsanchez/linked_lists/blob/main/sort_linked_list.py">Code</a></p>
 <p>Time Complexity: O(nlogn) </p>
 <p> Space Complexity O(n)</p>
 
-1) identify dummy head/current pointer
-2) BASE: check if lists exist/have content within. if either are empty, return the other.
-4) split: use slow/fast
-5) sort into merged list by comparing left and right. 
-6) return dummy.next to give entire list
+1) BASE - check if lists exist/have content within. if either are empty, return the other.
+2) mid - find midpoint of the list.
+3) split - use slow/fast method & mid to split into two lists. 
+4) sort -
+    - recursion - sortList will continue to split list down, creates stack of mini lists to compare.
+    - merge - return of merge will close out recursion level and merge two sorted lists 
+5) return self.merge to return final merge of two sorted lists.
 
 <a name="llist_cycle"></a>
 ## Determine if Cycle Present
 
+<p><a href="https://github.com/njbsanchez/linked_lists/blob/main/merge_lists.py">Code</a></p>
 <p> Time Complexity: O(nlogn) </p>
 <p> Space Complexity O(n)</p>
 
@@ -37,6 +40,7 @@ Compilation of all linked list whiteboarding problems with psuedocode notes and 
 <a name="mergesort"></a>
 ## Merge 2 Sorted Lists
 
+<p><a href="https://github.com/njbsanchez/linked_lists/blob/main/merge_lists.py">Code</a></p>
 <p> Time Complexity: O(nlogn) </p>
 <p> Space Complexity O(n)</p>
 <p> Resource/Tutorial: https://www.youtube.com/watch?v=y1RnweT17v0 </p>
