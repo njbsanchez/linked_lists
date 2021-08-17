@@ -60,12 +60,13 @@ Compilation of all linked list whiteboarding problems with psuedocode notes and 
 <a name="removenth"></a>
 ## Remove Nth Node from End
 
+<p><a href="https://github.com/njbsanchez/linked_lists/blob/main/remove_nth_from_end.py">Code</a></p>
 <p> Time Complexity: O(n) in worst case scenario. (if no cycle, O(N/2)). </p>
 <p> Space Complexity O(n)</p>
 <p> Resource/Tutorial: https://www.youtube.com/watch?v=IwKSscJW0Uk </p>
 
 1) Create dummy head node
-2) point "fast" and "slow" both to dummy_head
+2) use n-step delay: point "fast" and "slow" both to dummy_head
 3) iterate through list, move fast.pointer to fast.next. delay slow pointer's movement by n interations.
 4) once fast pointer hits last node, slow.next == node prior to node_to_del
 5) reassign slow.next to node_to_del.next
@@ -76,11 +77,25 @@ Summary: use of two pointers (with n-step delay) to determine traits about direc
 <a name="reverse"></a>
 ## Reverse Linked List (iteratively)
 
-<p>TBA </p>
+<p><a href="https://github.com/njbsanchez/linked_lists/blob/main/reverse.py">Code</a></p>
+<p> Time Complexity: O(n)</p>
+<p> Space Complexity O(n)</p>
+<p> Resource/Tutorial: Leetcode </p>
+
+1) base case: if head or head.next does not exist, return head
+2) assign head as "done" and head.next as "current"
+3) point done.next to None
+4) while current still exists, assign current.next as "hold". in the mean time, assign "done" to current.next. reassign "current" to "done".
+5) reassign "hold" to "current". 
 
 ## Reverse Linked List (recursively)
 
-<p>TBA </p>
+<p><a href="https://github.com/njbsanchez/linked_lists/blob/main/reverse.py">Code</a></p>
+<p> Time Complexity: O(n)</p>
+<p> Space Complexity O(n)</p>
+<p> Resource/Tutorial: Leetcode </p>
+
+1) base case: if head or head.next does not exist, return head
 
 <a name="misc"></a>
 ## Misc Notes
