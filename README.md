@@ -6,6 +6,7 @@ Compilation of all linked list whiteboarding problems with psuedocode notes and 
 
 <li><a href="#sortlist">SortList</a></li>
 <li><a href="#mergesort">Merge 2 Sorted Lists</a></li>
+<li><a href="#mergesort">Merge 2 Sorted Lists</a></li>
 <li><a href="#removenth">Remove Nth Node from End</a></li>
 <li><a href="#misc">Misc Notes</a></li>
 </ul>
@@ -22,20 +23,8 @@ Compilation of all linked list whiteboarding problems with psuedocode notes and 
 3) split - use slow/fast method & mid to split into two lists. 
 4) sort -
     - recursion - sortList will continue to split list down, creates stack of mini lists to compare.
-    - merge - return of merge will close out recursion level and merge two sorted lists 
+    - merge - return of merge will close out recursion level and merge two sorted lists
 5) return self.merge to return final merge of two sorted lists.
-
-<a name="llist_cycle"></a>
-## Determine if Cycle Present
-
-<p><a href="https://github.com/njbsanchez/linked_lists/blob/main/merge_lists.py">Code</a></p>
-<p> Time Complexity: O(nlogn) </p>
-<p> Space Complexity O(n)</p>
-
-1) identify dummy head/current pointer
-2) check if lists exist/have content within. if either are empty, return the other.
-4) sort into merged list by comparing left and right. 
-5) return dummy.next to give entire list
 
 <a name="mergesort"></a>
 ## Merge 2 Sorted Lists
@@ -45,10 +34,28 @@ Compilation of all linked list whiteboarding problems with psuedocode notes and 
 <p> Space Complexity O(n)</p>
 <p> Resource/Tutorial: https://www.youtube.com/watch?v=y1RnweT17v0 </p>
 
-1) Find the midpoint (utilize slow,fast method; assign mid to slow.next
-2) identify left and right lists (slow.next = head of right list)
-3) recurse sortList thru left and right list (continue identifying mids, sort, merge thru each recursed level)
-4) similar to sortList, merge left and right (identify dummy head/current pointer - sort into merged list by comparing left and right. return dummy.next to give entire list
+1)  create dummy node to connect new list to
+2)  compare head of l1 and l2; which ever lesser than, assign variable "current" to add to dummy_nodes's linked list. continue with rest of l1 and l2
+    - be sure to cover all cases: base case (l1 & l2 == None), if list 1 or list 2 are empty, etc.
+
+<a name="llist_cycle"></a>
+## Determine if Cycle Present
+
+<p><a href="https://github.com/njbsanchez/linked_lists/blob/main/two_pointer.py">Code</a></p>
+<p> Time Complexity: O(nlogn) </p>
+<p> Space Complexity O(n)</p>
+
+1) utilize slow-fast method (assign slow & fast to head)
+2) while both fast and fast.next exist, reassign fast and slow to next node in their respective algorithmic pattern
+3) return true if fast == slow (variables will eventually point to the same node if there is a cycle). return false if else. (if there is no cycle, fast.next == None)
+
+(To find first node in cycle)
+
+1) utilize slow-fast method (assign slow & fast to head)
+2) while both fast and fast.next exist, reassign fast and slow to next node in their respective algorithmic pattern
+3) break if fast == slow (variables will eventually point to the same node if there is a cycle. It would have taken 1 1/2 x [length pre-cycle + 1 cycle] for fast == slow). return None if else. (if there is no cycle, fast.next == None)
+4) need to go another 1/2 [length of pre-cycle + 1 cycle] to get to starting node of cycle. move head to head.next and slow to slow.next until slow == head. return head.
+
 
 <a name="removenth"></a>
 ## Remove Nth Node from End
