@@ -1,13 +1,14 @@
 <h1>linked_lists</h1>
 
-Compilation of all linked list whiteboarding problems with psuedocode notes and step by step guidance on how I solve each problem.
+Compilation of all linked list whiteboarding problems with psuedocode notes and step by step guidance on how I solve each problem. 
 
 ## Table of Contents
 
 <li><a href="#sortlist">SortList</a></li>
 <li><a href="#mergesort">Merge 2 Sorted Lists</a></li>
-<li><a href="#mergesort">Merge 2 Sorted Lists</a></li>
+<li><a href="#llist_cycle">Check for Cycle</a></li>
 <li><a href="#removenth">Remove Nth Node from End</a></li>
+<li><a href="#reverse">Reverse Linked List (iteratively & recursively)</a></li>
 <li><a href="#misc">Misc Notes</a></li>
 </ul>
 
@@ -95,7 +96,14 @@ Summary: use of two pointers (with n-step delay) to determine traits about direc
 <p> Space Complexity O(n)</p>
 <p> Resource/Tutorial: Leetcode </p>
 
-1) base case: if head or head.next does not exist, return head
+1) assign "current" variable to head
+2) base case: if current or current.next does not exist, return current
+3) assign hold to current.next
+4) recursion - assign "new_head" to self.recurseReverseList(hold) 
+    - this puts nodes into an imaginary "stack", which then returns the last node and assigns it to "new_head" variable
+    - new_head is returned (last node), next node in "stack" is assigned to new_head.next
+    - new_head is returned (the last node), the next node in "stack" is assigned to new_head.next.next and so one until "stack" is cleared.
+    - new_head is finally returned, closing out totality of method.
 
 <a name="misc"></a>
 ## Misc Notes
