@@ -69,19 +69,12 @@ class Solution(object):
         
         """
         
-        if head is None or head.next is None:
+        if not head or not head.next:
             return head
+        second = head.next
+        reverse = self.recurseReverseList(second)
+        second.next = head
+        head.next = None
         
-        done = head
-        current = head.next
-        done.next = None
-        
-        while current:
-            hold = current.next
-            current.next = done
-            
-            done = current
-            current = hold
-        
-        return done
+        return reverse
     
